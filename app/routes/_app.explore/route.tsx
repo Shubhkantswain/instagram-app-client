@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search, Heart, MessageCircle, Bookmark, MoreHorizontal } from 'lucide-react';
+import { useNavigate } from '@remix-run/react';
 
 export default function ExploreGrid() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,10 +31,12 @@ export default function ExploreGrid() {
 
   ];
 
+  const navigate = useNavigate()
+
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-black border-b border-[#262626] px-4 py-2">
+      <header className="sticky top-0 z-10 bg-black border-b border-[#262626] px-4 py-2" onClick={() => navigate("/search")}>
         <div className="relative max-w-screen-lg mx-auto">
           <div className="relative">
             <input
