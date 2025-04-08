@@ -7,7 +7,7 @@ export default function PostSection() {
             id: 1,
             username: 'digitalhunters.in',
             timeAgo: '1 d',
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSrHA7TBwdjjmLJMlKuOJUFEVl2GOWLcYnNg&s',
+            imageUrl: 'https://i.pinimg.com/236x/47/bb/90/47bb908395e8ff7121dbb68bd534581f.jpg',
             likes: 1,
             caption: "Design isn't just art — it's strategy..."
         },
@@ -30,7 +30,7 @@ export default function PostSection() {
     ];
 
     return (
-        <div className="max-w-2xl mx-auto space-y-6 py-4">
+        <div className="max-w-2xl mx-auto space-y-6 -mt-5 md:mt-0">
             {posts.map(post => {
                 const [liked, setLiked] = useState(false);
                 const [saved, setSaved] = useState(false);

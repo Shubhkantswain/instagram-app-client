@@ -1,17 +1,18 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet, useLocation } from "@remix-run/react";
 import MobileHeader from "./_components/MobileHeader";
 import DesktopSidebar from "./_components/DesktopSidebar";
 import CollapsedSidebar from "./_components/CollapsedSidebar";
 import MobileNavigationFooter from "./_components/MobileNavigationFooter";
 
 export default function AppLayout() {
+    const location = useLocation()
+    const isExplorePage = location.pathname == "/explore"
     return (
         <>
             <div className="flex flex-col md:flex-row h-screen bg-black overflow-hidden">
 
                 {/* Mobile Header */}
                 <MobileHeader />
-
                 {/* Sidebar for md+ */}
                 <div className="hidden md:flex flex-col border-r border-[#262626] bg-black">
                     {/* Full sidebar on lg */}
